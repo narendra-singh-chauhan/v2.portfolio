@@ -70,7 +70,7 @@ const Projects = () => {
               className="bg-gray-100 rounded-lg overflow-hidden shadow-lg"
             >
               <Image
-                src={project.image || image}
+                src="/placeholder.svg"
                 alt={project.title}
                 width={400}
                 height={200}
