@@ -18,6 +18,8 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    loader: 'default',
+    path: '/v2.portfolio'
   },
   experimental: {
     webpackBuildWorker: true,

@@ -3,6 +3,8 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 
+const profile = `${process.env.NEXT_PUBLIC_BASE_PATH}/profile.v1.jpeg`
+
 const Hero = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(true)
 
@@ -43,7 +45,7 @@ const Hero = () => {
         >
           <div className="relative w-64 h-64 md:w-96 md:h-96 mx-auto" onClick={toggleTheme}>
             <Image
-              src="/profile.v1.jpeg"
+              src={profile}
               alt="Narendra Singh"
               layout="fill"
               objectFit="cover"
