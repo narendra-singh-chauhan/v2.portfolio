@@ -9,6 +9,7 @@ try {
 const nextConfig = {
   output: "export",  // <=== enables static exports
   basePath: '/v2.portfolio', // Adjust this if needed
+  assetPrefix: '/v2.portfolio', // Adjust this if needed
   eslint: {
     ignoreDuringBuilds: true,
   },
