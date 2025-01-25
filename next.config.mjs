@@ -8,6 +8,7 @@ try {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",  // <=== enables static exports
+  basePath: '/v2.portfolio', // Adjust this if needed
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
@@ -23,7 +24,6 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
-  basePath: '/v2.portfolio', // Adjust this if needed
 }
 
 mergeConfig(nextConfig, userConfig)
