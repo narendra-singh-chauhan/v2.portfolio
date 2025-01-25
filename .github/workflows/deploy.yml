@@ -1,13 +1,12 @@
-# .github/workflows/deploy.yml
 name: Deploy to GitHub Pages
-
 on:
   push:
     branches: [main]
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
