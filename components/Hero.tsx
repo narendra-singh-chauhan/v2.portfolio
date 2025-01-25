@@ -43,7 +43,7 @@ const Hero = () => {
         >
           <div className="relative w-64 h-64 md:w-96 md:h-96 mx-auto" onClick={toggleTheme}>
             <Image
-              src="/profile.v1.jpeg"
+              src="/v2.portfolio/profile.v1.jpeg"
               alt="Narendra Singh"
               layout="fill"
               objectFit="cover"
