@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps # Added flag
       - run: npm run build
       - uses: JamesIves/github-pages-deploy-action@v4
         with:

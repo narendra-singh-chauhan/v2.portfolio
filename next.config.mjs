@@ -9,7 +9,6 @@ try {
 const nextConfig = {
   output: "export",  // <=== enables static exports
   basePath: '/v2.portfolio', // Adjust this if needed
-  reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
