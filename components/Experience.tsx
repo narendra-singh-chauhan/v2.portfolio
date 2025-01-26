@@ -1,6 +1,7 @@
 "use client"
-import { motion } from "framer-motion"
-import { FaBriefcase } from "react-icons/fa"
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { FaBriefcase, FaChevronDown } from "react-icons/fa"
 
 const experiences = [
   {
@@ -30,36 +31,56 @@ const experiences = [
 ]
 
 const Experience = () => {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
+
   return (
-    <section id="experience" className="py-20 bg-white">
+    <section id="experience" className="py-20 bg-background">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Work Experience</h2>
-        <div className="space-y-12">
+        <h2 className="text-3xl font-bold text-center text-foreground mb-12">Work Experience</h2>
+        <div className="space-y-6">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="flex flex-col md:flex-row"
+              className="bg-card rounded-lg shadow-md overflow-hidden"
             >
-              <div className="md:w-1/4">
-                <div className="flex items-center mb-4">
-                  <FaBriefcase className="text-blue-600 mr-2" />
-                  <h3 className="text-xl font-semibold text-gray-800">{exp.title}</h3>
+              <div
+                className="p-6 cursor-pointer flex justify-between items-center"
+                onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+              >
+                <div className="flex items-center">
+                  <FaBriefcase className="text-primary mr-4" size={24} />
+                  <div>
+                    <h3 className="text-xl font-semibold text-card-foreground">{exp.title}</h3>
+                    <p className="text-muted-foreground">{exp.company}</p>
+                  </div>
                 </div>
-                <p className="text-gray-600 mb-2">{exp.company}</p>
-                <p className="text-gray-500 text-sm">{exp.duration}</p>
+                <motion.div animate={{ rotate: expandedIndex === index ? 180 : 0 }} transition={{ duration: 0.3 }}>
+                  <FaChevronDown className="text-primary" size={18} />
+                </motion.div>
               </div>
-              <div className="md:w-3/4 mt-4 md:mt-0 md:pl-8 border-l border-gray-200">
-                <ul className="list-disc list-inside space-y-2">
-                  {exp.description.map((item, i) => (
-                    <li key={i} className="text-gray-600">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <AnimatePresence>
+                {expandedIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="px-6 pb-6"
+                  >
+                    <p className="text-muted-foreground mb-4">{exp.duration}</p>
+                    <ul className="list-disc list-inside space-y-2">
+                      {exp.description.map((item, i) => (
+                        <li key={i} className="text-card-foreground">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           ))}
         </div>
