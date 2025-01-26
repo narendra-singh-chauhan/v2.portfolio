@@ -2,14 +2,14 @@
 import { motion } from "framer-motion"
 
 const skillsData = [
-  { name: "React", level: 90 },
+  { name: "React", level: 95 },
   { name: "Node.js", level: 85 },
   { name: "JavaScript", level: 95 },
-  { name: "TypeScript", level: 80 },
-  { name: "MongoDB", level: 75 },
-  { name: "Next.js", level: 85 },
-  { name: "Express", level: 80 },
-  { name: "HTML/CSS", level: 90 },
+  { name: "TypeScript", level: 95 },
+  { name: "MongoDB", level: 90 },
+  { name: "Next.js", level: 60 },
+  { name: "Express", level: 95 },
+  { name: "HTML/CSS", level: 85 },
 ]
 
 const SkillsMatrix = () => {

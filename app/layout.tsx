@@ -1,14 +1,16 @@
 import "./globals.css"
-import { Inter } from "next/font/google"
 import { JetBrains_Mono } from "next/font/google"
+import { Metadata } from "next"
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Narendra Singh - Full Stack Developer",
   description: "Portfolio of Narendra Singh, a Full Stack Developer with 3 years of experience",
+  icons: {
+    icon: "/v2.portfolio/icon.ico",
+  },
 }
-
 export default function RootLayout({
   children,
 }: {
@@ -20,4 +22,3 @@ export default function RootLayout({
     </html>
   )
 }
-

@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaCode } from "react-icons/fa"
 import { HiDownload, HiEye } from "react-icons/hi"
 
 const Hero = () => {
@@ -47,68 +47,81 @@ const Hero = () => {
           >
             <motion.a
               href="#contact"
-              className="bg-primary text-primary-foreground px-6 py-3 rounded-full text-lg font-semibold hover:bg-primary/90 transition duration-300"
+              className="bg-secondary text-secondary-foreground px-6 py-3 rounded-full text-lg font-semibold flex items-center hover:bg-secondary/90 transition duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Get in Touch
             </motion.a>
-            <motion.a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-secondary text-secondary-foreground px-6 py-3 rounded-full text-lg font-semibold hover:bg-secondary/90 transition duration-300 flex items-center"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+
+            {/* Single Resume Button */}
+            <motion.div
+              className="relative group"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1, duration: 0.8 }}
             >
-              <HiEye className="mr-2" /> Preview Resume
-            </motion.a>
-            <motion.a
-              href="/resume.pdf"
-              download
-              className="bg-secondary text-secondary-foreground px-6 py-3 rounded-full text-lg font-semibold hover:bg-secondary/90 transition duration-300 flex items-center"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              <button className="bg-secondary text-secondary-foreground px-6 py-3 rounded-full text-lg font-semibold flex items-center hover:bg-secondary/90 transition duration-300">
+                My Resume
+              </button>
+              {/* Hover Icons */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 bg-secondary text-secondary-foreground px-4 py-4 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col gap-4">
+                <a
+                  href="https://drive.google.com/file/d/1XWcxAcpLLCc7Gg7QenUjLupdto1j75HN/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition duration-300 flex items-center"
+                >
+                  <HiEye className="mr-2" /> Preview
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/1XWcxAcpLLCc7Gg7QenUjLupdto1j75HN/view?usp=drive_link"
+                  download
+                  className="hover:text-primary transition duration-300 flex items-center"
+                >
+                  <HiDownload className="mr-2" /> Download
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Links */}
+            <motion.div
+              className="relative group"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2, duration: 0.8 }}
             >
-              <HiDownload className="mr-2" /> Download Resume
-            </motion.a>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
-            className="flex justify-center md:justify-start space-x-4 mt-8"
-          >
-            <motion.a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground hover:text-primary transition duration-300"
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <FaGithub size={24} />
-            </motion.a>
-            <motion.a
-              href="https://linkedin.com/in/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground hover:text-primary transition duration-300"
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <FaLinkedin size={24} />
-            </motion.a>
-            <motion.a
-              href="https://twitter.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground hover:text-primary transition duration-300"
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <FaTwitter size={24} />
-            </motion.a>
+              <button className="bg-secondary text-secondary-foreground px-6 py-3 rounded-full text-lg font-semibold flex items-center hover:bg-secondary/90 transition duration-300">
+                Profile Links
+              </button> 
+              {/* Hover Icons */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 bg-secondary text-secondary-foreground px-4 py-4 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col gap-4">
+                <a
+                  href="https://github.com/narendra-singh-chauhan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition duration-300 flex items-center"
+                >
+                  <FaGithub className="mr-2" /> GitHub
+                </a>
+                <a
+                  href="https://linkedin.com/in/narendra-singh-982a2b247"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition duration-300 flex items-center"
+                >
+                  <FaLinkedin className="mr-2" /> LinkedIn
+                </a>
+                <a
+                  href="https://leetcode.com/u/narendra-singh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition duration-300 flex items-center"
+                >
+                  <FaCode className="mr-2" /> LeetCode
+                </a>
+              </div>
+            </motion.div>
           </motion.div>
         </motion.div>
         <motion.div
@@ -133,4 +146,3 @@ const Hero = () => {
 }
 
 export default Hero
-

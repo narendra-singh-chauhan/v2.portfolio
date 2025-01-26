@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
 import { useTheme } from "next-themes"
 import { FiSun, FiMoon, FiMonitor } from "react-icons/fi"
 
@@ -45,8 +46,17 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-3">
         <div className="flex justify-between items-center">
           <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
-            <Link href="/" className="text-2xl font-bold text-primary">
-              Narendra Singh
+            <Link href="/" className="text-2xl font-bold text-primary flex items-center space-x-2">
+              {/* Narendra Singh */}
+              <div className="relative w-10 h-10">
+                <Image
+                  src="/v2.portfolio/icon.webp"
+                  alt="Narendra Singh"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-full shadow-2xl"
+                />
+              </div>
             </Link>
           </motion.div>
           <div className="hidden md:flex space-x-4 items-center">

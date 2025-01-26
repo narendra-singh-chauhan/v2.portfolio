@@ -1,16 +1,10 @@
 "use client"
-import { useState } from "react"
 import { motion } from "framer-motion"
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa"
 
 const Contact = () => {
-  const [formStatus, setFormStatus] = useState<string | null>(null)
-
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    // Placeholder for form submission
-    console.log("Form submitted")
-    setFormStatus("Message sent successfully!")
+    event.preventDefault();
   }
 
   return (
@@ -101,11 +95,6 @@ const Contact = () => {
                 Send Message
               </motion.button>
             </form>
-            {formStatus && (
-              <p className={`mt-4 text-center ${formStatus.includes("success") ? "text-green-500" : "text-red-500"}`}>
-                {formStatus}
-              </p>
-            )}
           </motion.div>
         </div>
       </div>

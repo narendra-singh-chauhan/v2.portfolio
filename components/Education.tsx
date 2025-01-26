@@ -5,7 +5,7 @@ import { FaGraduationCap } from "react-icons/fa"
 const educationData = [
   {
     degree: "Bachelor of Computer Applications",
-    institution: "Veer Narmad South Gujarat University",
+    institution: "Smt Devkiba Mohansinhji Chauhan College of Commerce & Science",
     year: "2019 - 2022",
     description: "Focused on computer science fundamentals and application development.",
   },
@@ -17,7 +17,7 @@ const educationData = [
   },
   {
     degree: "Secondary Education",
-    institution: "Gujarat Secondary and Higher Secondary Education Board",
+    institution: "Board of Secondary Education, Rajasthan",
     year: "2016 - 2017",
     description: "Completed general education with distinction.",
   },

@@ -16,15 +16,15 @@ const projects = [
     description:
       "Designed components, integrated APIs, and managed data through charts, tables, and forms. Generated reports on survey data and facilitated media uploading using AWS S3.",
     tech: "React JS, GraphQL, AWS Amplify, Lambda Functions, Ant Design",
-    image: "/v2.portfolio/placeholder.svg",
-    link: "https://hydrus.ai",
+    image: "/v2.portfolio/projects/hydrus.png",
+    link: "https://www.hydrus.ai",
   },
   {
     title: "HRM",
     description:
       "Developed user and admin features for leave management, payroll, and more. Created APIs and integrated email functionality.",
     tech: "TypeScript, Metronic, Redux Toolkit, Formik & Yup, MERN Stack, Job Queue",
-    image: "/v2.portfolio/placeholder.svg",
+    image: "/v2.portfolio/projects/hrm.png",
     link: "https://hrm-h12f.onrender.com",
   },
   {
@@ -32,8 +32,8 @@ const projects = [
     description:
       "Developed a project management tool with features to oversee employees, projects, tasks, and teams. Introduced bidirectional sliders for listing project tasks.",
     tech: "Next.js, TypeScript, Redux Toolkit, Formik & Yup, Lodash",
-    image: "/v2.portfolio/placeholder.svg",
-    link: "https://yp-next.vercel.app",
+    image: "/v2.portfolio/projects/your-promate.png",
+    link: "https://yp-next.vercel.app/",
   },
   {
     title: "SkyLudo",
@@ -48,7 +48,7 @@ const projects = [
     description:
     "Developed a product with multiple games like escape the lava, find the color, red light green light, sharp shooter and human vs zombies using mern stack technologies with electron for desktop app and realm db for offline database.",
     tech: "MERN Stack, Electron, Realm DB",
-    image: "/v2.portfolio/placeholder.svg",
+    image: "/v2.portfolio/projects/hyper-grid.jpeg",
     link: "https://skyludo.com",
   },
 ]
@@ -78,14 +78,14 @@ const Projects = () => {
                 <h3 className="text-xl font-semibold text-foreground mb-2">{project.title}</h3>
                 <p className="text-muted-foreground mb-4">{project.description}</p>
                 <p className="text-sm text-muted-foreground mb-4">{project.tech}</p>
-                <a
+                {/* <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800 transition duration-300"
                 >
                   View Project
-                </a>
+                </a> */}
               </div>
             </motion.div>
           ))}
