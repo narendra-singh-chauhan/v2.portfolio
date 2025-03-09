@@ -132,7 +132,7 @@ const Hero = () => {
         >
           <div className="relative w-64 h-64 md:w-96 md:h-96 mx-auto mt-20 md:mt-0">
             <Image
-              src="/v2.portfolio/profile.v1.jpeg"
+              src="/profile.v1.jpeg"
               alt="Narendra Singh"
               layout="fill"
               objectFit="cover"

@@ -50,7 +50,7 @@ const Header = () => {
               {/* Narendra Singh */}
               <div className="relative w-10 h-10">
                 <Image
-                  src="/v2.portfolio/icon.webp"
+                  src="/icon.webp"
                   alt="Narendra Singh"
                   layout="fill"
                   objectFit="cover"

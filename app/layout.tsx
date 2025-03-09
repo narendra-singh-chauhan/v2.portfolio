@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Narendra Singh - Full Stack Developer",
   description: "Portfolio of Narendra Singh, a Full Stack Developer with 3 years of experience",
   icons: {
-    icon: "/v2.portfolio/icon.ico",
+    icon: "/icon.ico",
   },
 }
 export default function RootLayout({
