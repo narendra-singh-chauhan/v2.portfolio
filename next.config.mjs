@@ -8,8 +8,8 @@ try {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",  // <=== enables static exports
-  basePath: '/v2.portfolio', // Adjust this if needed
-  assetPrefix: '/v2.portfolio', // Adjust this if needed
+  // basePath: '/v2.portfolio', // Adjust this if needed
+  // assetPrefix: '/v2.portfolio', // Adjust this if needed
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -19,7 +19,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
     loader: 'default',
-    path: '/v2.portfolio'
+    // path: '/v2.portfolio'
   },
   experimental: {
     webpackBuildWorker: true,
